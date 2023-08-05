@@ -1,0 +1,399 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Sriracha&display=swap');
+
+:root {
+    /* --font-ttitulos:'Berkshire Swash', cursive; */
+
+    --font-h2-section: 'Berkshire Swash', cursive;
+
+    --font-p-section: 'Sriracha', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 65.5%;
+    width: 100%;
+
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: url(../imagens/mesa-com-maquininha.jpg) center center no-repeat;
+    background-size: cover;
+    height: 150px;
+    padding: 0px 30px;
+    width: 100%;
+}
+
+.header h1 {
+    font-size: 5.0rem;
+    color: white;
+    font-family: var(--font-h2-section);
+}
+
+.header .logo {
+    border-radius: 50%;
+
+}
+
+.header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.header nav ul li {
+    margin-right: 5px;
+}
+
+.header nav ul li a {
+    padding: 5px 20px;
+    font-size: 1.8rem;
+    transition: 0.3s;
+    font-family: var(--font-p-section);
+    color: white;
+}
+
+.header nav ul li a:hover {
+    background: #F2EEEB;
+    border-radius: 50px;
+    color: #0D0B08;
+}
+
+@media screen and (max-width:1186px) {
+    .header {
+        flex-direction: column;
+        height: 40vh;
+        width: 100%;
+    }
+
+    .header nav ul li {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .header h1 {
+        font-size: 3.0rem;
+    }
+
+    .header {
+        display: block;
+        height: auto;
+        text-align: center;
+    }
+
+    .header nav ul {
+        display: block;
+    }
+}
+
+
+
+main.conteiner {
+    margin: auto;
+    width: 100%;
+}
+
+
+/* PRA TODAS SECTION O H2 E O P VAI SER ASSIM: */
+section h2 {
+    font-size: 4.0rem;
+    margin-bottom: 50px;
+    font-family: var(--font-h2-section);
+    font-weight: 400;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.139);
+}
+
+section p {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: var(--font-p-section);
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.139);
+}
+
+/* TODAS AS SECTION VÃO TER */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fundo-escuro-da-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.516);
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+@media screen and (max-width:425px){
+    section.hero h2{
+        font-size: 2.5rem;
+        
+    }
+    section.hero p{
+        font-size:1.7rem;
+        text-align: center;
+        
+    }
+}
+
+
+/* === SEÇÃO HERO A APRESENTAÇÃO === */
+section.hero {
+    position: relative;
+    background-color: white;
+    background-size: cover;
+    height: 90vh;
+    width: 100%;
+}
+
+section.hero::after {
+    content: url(../imagens/seta_preta.png);
+    position: absolute;
+    height: 35px;
+    bottom: 90px;
+
+    animation: downarrow 0.6s infinite alternate ease-in-out;
+
+}
+
+
+@-webkit-keyframes downarrow {
+    0% {
+        -webkit-transform: translateY(0);
+        opacity: 0.4;
+    }
+
+    100% {
+        -webkit-transform: translateY(0.4em);
+        opacity: 0.9;
+    }
+
+
+}
+@media screen and (max-width: 768px){
+    section.hero{
+        text-align: center;
+    }
+    section.hero::after{
+         height: 35px;
+        bottom: 40px;
+
+    }
+
+}
+
+
+
+
+/* === SEÇÃO SOBRE === */
+section.secao-sobre {
+    background: url(../imagens/salao-panorama.jpg) center center no-repeat;
+    background-size: cover;
+    height: 90vh;
+    width: 100%;
+    color: #F2EEEB;
+}
+
+
+/* === SEÇÃO DE MELHORES CORTES === */
+section.melhores-cortes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    background: #F2EEEB;
+    box-shadow: inset 1px -3px 15px 2px rgba(0, 0, 0, 0.29);
+
+}
+
+div.cortes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 300px));
+    grid-template-rows: minmax(200px, 300px);
+    gap: 40px;
+
+}
+
+div.corte-mostrado {
+    position: relative;
+    border: 2px solid #0D0B08;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+div.corte-mostrado:hover {
+    opacity: 0.9;
+}
+
+.corte-1 {
+    background: url(../imagens/corte1.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.corte-2 {
+    background: url(../imagens/corte2.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.corte-3 {
+    background: url(../imagens/corte3.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+button.fazer-corte {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 100px;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 30px;
+    font-weight: bold;
+    background: rgba(68, 67, 67, 0.566);
+    color: white;
+    transition: 0.3s;
+}
+
+button.fazer-corte:hover {
+    background: white;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+@media screen and (max-width:999px){
+    section.melhores-cortes{
+        height: 100%;
+        padding-bottom:50px ;
+        text-align: center;
+    }
+    section.melhores-cortes div.cortes{
+        grid-template-columns: minmax(200px, 400px);
+        grid-template-rows: repeat(3, 400px)
+    }
+}
+
+/* === SEÇÃO ONDE ESTAMOS === */
+section.secao-onde-estamos {
+    height: 70vh;
+    width: 100%;
+    background: url(../imagens/pexels-caleb-oquendo-3162022.jpg) center center no-repeat;
+    background-size: cover;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+
+address {
+    font-size: 2.5rem;
+}
+
+
+/* === SEÇãO CONTATO === */
+
+section.secao-contato {
+    position: relative;
+    background: #F2EEEB;
+    height: 70vh;
+    width: 100%;
+}
+
+section.secao-contato a i {
+    font-size: 4.0rem;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: black;
+}
+
+.voltar-topo {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 10px;
+    bottom: 20px;
+}
+
+
+
+/* === SECAO DO RODAPE === */
+.rodape {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #595351;
+}
+
+.rodape nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.rodape nav ul li {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-left: 20px;
+}
+
+.rodape nav ul li a {
+    color: white;
+}
+
+.rodape p {
+    font-size: 1.9rem;
+    margin-top: 20px;
+
+}
+
+.rodape p a {
+    color: black;
+    align-self: normal;
+}
+
+.rodape p a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+@media screen and (max-width:436px ){
+    .rodape nav ul{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 20px;
+    }
+    .rodape nav ul li a{
+        font-size: 1.6rem;
+    }
+    .rodape p {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .rodape nav ul{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 20px;
+    }
+}
