@@ -63,6 +63,11 @@ html {
     font-family: var(--font-p-section);
     color: white;
 }
+.header i{
+    display: none;
+    color: white;
+    font-size: 3.0rem;
+}
 
 .header nav ul li a:hover {
     background: #F2EEEB;
@@ -75,6 +80,7 @@ html {
         flex-direction: column;
         height: 40vh;
         width: 100%;
+        padding-top: 20px;
     }
 
     .header nav ul li {
@@ -94,7 +100,16 @@ html {
     }
 
     .header nav ul {
+        display: none;
+    }
+    .header nav ul li a:hover{
+        background-color: #0d0b0800;
+        color:white ;
+    }
+    .header i{
         display: block;
+        padding: 20px 0px;
+        cursor: pointer;
     }
 }
 
@@ -191,7 +206,7 @@ section.hero::after {
         text-align: center;
     }
     section.hero::after{
-         height: 35px;
+        height: 35px;
         bottom: 40px;
 
     }
@@ -199,8 +214,8 @@ section.hero::after {
 }
 @media screen and (max-width:425px){
     section.hero{
-        padding: 20px;
-        height: 55vh;
+        padding: 70px 20px ;
+        height: auto;
     }
 }
 
