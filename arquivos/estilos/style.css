@@ -141,11 +141,11 @@ section {
     color: white;
 }
 @media screen and (max-width:425px){
-    section.hero h2{
+    section h2{
         font-size: 2.5rem;
         
     }
-    section.hero p{
+    section p{
         font-size:1.7rem;
         text-align: center;
         
@@ -197,6 +197,13 @@ section.hero::after {
     }
 
 }
+@media screen and (max-width:425px){
+    section.hero{
+        padding: 20px;
+        height: 55vh;
+    }
+}
+
 
 
 
@@ -209,6 +216,8 @@ section.secao-sobre {
     width: 100%;
     color: #F2EEEB;
 }
+
+
 
 
 /* === SEÇÃO DE MELHORES CORTES === */
@@ -277,7 +286,9 @@ button.fazer-corte:hover {
     color: black;
     border: 1px solid black;
     cursor: pointer;
+
 }
+
 
 @media screen and (max-width:999px){
     section.melhores-cortes{
@@ -290,6 +301,16 @@ button.fazer-corte:hover {
         grid-template-rows: repeat(3, 400px)
     }
 }
+@media screen and (max-width:425px){
+    section.melhores-cortes{
+        padding: 40px;
+    }
+    section.melhores-cortes div.cortes{
+        grid-template-columns: minmax(200px, 400px);
+        grid-template-rows: repeat(3, 250px)
+    }
+}
+
 
 /* === SEÇÃO ONDE ESTAMOS === */
 section.secao-onde-estamos {
