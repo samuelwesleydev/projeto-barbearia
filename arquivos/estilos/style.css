@@ -3,8 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Sriracha&display=swap');
 
 :root {
-    /* --font-ttitulos:'Berkshire Swash', cursive; */
-
     --font-h2-section: 'Berkshire Swash', cursive;
 
     --font-p-section: 'Sriracha', cursive;
@@ -23,17 +21,21 @@ html {
     width: 100%;
 
 }
+.header{
+    background: green;
+}
 
 
-.header {
+/* .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background: url(../imagens/mesa-com-maquininha.jpg) center center no-repeat;
     background-size: cover;
     height: 150px;
     padding: 0px 30px;
-    width: 100%;
+    width: 100vw;
+    overflow: hidden;
 }
 
 .header h1 {
@@ -58,7 +60,7 @@ html {
 
 .header nav ul li a {
     padding: 5px 20px;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     transition: 0.3s;
     font-family: var(--font-p-section);
     color: white;
@@ -67,52 +69,13 @@ html {
     display: none;
     color: white;
     font-size: 3.0rem;
-}
+} */
 
 .header nav ul li a:hover {
     background: #F2EEEB;
     border-radius: 50px;
     color: #0D0B08;
 }
-
-@media screen and (max-width:1186px) {
-    .header {
-        flex-direction: column;
-        height: 40vh;
-        width: 100%;
-        padding-top: 20px;
-    }
-
-    .header nav ul li {
-        margin-bottom: 20px;
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .header h1 {
-        font-size: 3.0rem;
-    }
-
-    .header {
-        display: block;
-        height: auto;
-        text-align: center;
-    }
-
-    .header nav ul {
-        display: none;
-    }
-    .header nav ul li a:hover{
-        background-color: #0d0b0800;
-        color:white ;
-    }
-    .header i{
-        display: block;
-        padding: 20px 0px;
-        cursor: pointer;
-    }
-}
-
 
 
 main.conteiner {
@@ -155,17 +118,6 @@ section {
     height: 100%;
     color: white;
 }
-@media screen and (max-width:425px){
-    section h2{
-        font-size: 2.5rem;
-        
-    }
-    section p{
-        font-size:1.7rem;
-        text-align: center;
-        
-    }
-}
 
 
 /* === SEÇÃO HERO A APRESENTAÇÃO === */
@@ -175,6 +127,7 @@ section.hero {
     background-size: cover;
     height: 90vh;
     width: 100%;
+    padding: 0px 30px;
 }
 
 section.hero::after {
@@ -201,23 +154,6 @@ section.hero::after {
 
 
 }
-@media screen and (max-width: 768px){
-    section.hero{
-        text-align: center;
-    }
-    section.hero::after{
-        height: 35px;
-        bottom: 40px;
-
-    }
-
-}
-@media screen and (max-width:425px){
-    section.hero{
-        padding: 70px 20px ;
-        height: auto;
-    }
-}
 
 
 
@@ -242,9 +178,10 @@ section.melhores-cortes {
     justify-content: center;
     align-items: center;
     height: 90vh;
-    width: 100%;
+    width: 100vw;
     background: #F2EEEB;
     box-shadow: inset 1px -3px 15px 2px rgba(0, 0, 0, 0.29);
+    overflow: hidden;
 
 }
 
@@ -305,32 +242,12 @@ button.fazer-corte:hover {
 }
 
 
-@media screen and (max-width:999px){
-    section.melhores-cortes{
-        height: 100%;
-        padding-bottom:50px ;
-        text-align: center;
-    }
-    section.melhores-cortes div.cortes{
-        grid-template-columns: minmax(200px, 400px);
-        grid-template-rows: repeat(3, 400px)
-    }
-}
-@media screen and (max-width:425px){
-    section.melhores-cortes{
-        padding: 40px;
-    }
-    section.melhores-cortes div.cortes{
-        grid-template-columns: minmax(200px, 400px);
-        grid-template-rows: repeat(3, 250px)
-    }
-}
 
 
 /* === SEÇÃO ONDE ESTAMOS === */
 section.secao-onde-estamos {
     height: 70vh;
-    width: 100%;
+    width: 100vw;
     background: url(../imagens/pexels-caleb-oquendo-3162022.jpg) center center no-repeat;
     background-size: cover;
     text-align: center;
@@ -349,7 +266,7 @@ section.secao-contato {
     position: relative;
     background: #F2EEEB;
     height: 70vh;
-    width: 100%;
+    width: 100vw;
 }
 
 section.secao-contato a i {
@@ -372,13 +289,14 @@ section.secao-contato a i {
 /* === SECAO DO RODAPE === */
 .rodape {
     height: 30vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background: #595351;
+    overflow: hidden;
 }
 
 .rodape nav ul {
@@ -412,24 +330,3 @@ section.secao-contato a i {
     color: white;
 }
 
-@media screen and (max-width:436px ){
-    .rodape nav ul{
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        gap: 20px;
-    }
-    .rodape nav ul li a{
-        font-size: 1.6rem;
-    }
-    .rodape p {
-        font-size: 1.3rem;
-    }
-}
-
-@media screen and (max-width: 320px){
-    .rodape nav ul{
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        gap: 20px;
-    }
-}
