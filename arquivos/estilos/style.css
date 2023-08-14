@@ -18,69 +18,69 @@
 html {
     scroll-behavior: smooth;
     font-size: 65.5%;
-    width: 100%;
 
 }
+
 .header{
-    background: green;
-}
-
-
-/* .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     background: url(../imagens/mesa-com-maquininha.jpg) center center no-repeat;
     background-size: cover;
-    height: 150px;
-    padding: 0px 30px;
-    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    width: 100%;
     overflow: hidden;
+    padding: 20px 40px;
 }
-
-.header h1 {
+.header div{
+    display: flex;
+    justify-self: start;
+    align-items:center;
+    gap: 30px;
+}
+.header h1{
     font-size: 5.0rem;
     color: white;
     font-family: var(--font-h2-section);
+    text-shadow: 3px 3px 3px rgba(255, 255, 255, 0.137);
 }
-
-.header .logo {
+.header .logo{
     border-radius: 50%;
-
 }
-
-.header nav ul {
-    display: flex;
-    list-style: none;
+.header nav {
+    align-self:flex-end;
 }
-
-.header nav ul li {
-    margin-right: 5px;
-}
-
-.header nav ul li a {
-    padding: 5px 20px;
-    font-size: 2.2rem;
-    transition: 0.3s;
-    font-family: var(--font-p-section);
-    color: white;
-}
-.header i{
+.header nav i {
     display: none;
     color: white;
-    font-size: 3.0rem;
-} */
+    font-size: 4.0rem;
+}
+.header nav ul{
+    display:flex;
+    justify-content: space-between;
+    list-style: none;
+
+}
+.header nav ul li a{
+    color:white;
+    font-size: 2.3rem;
+    padding: 0px 10px;
+    text-shadow:1px 1px 1px rgba(255, 255, 255, 0.445);
+    font-family: var(--font-p-section);
+
+}
+
 
 .header nav ul li a:hover {
     background: #F2EEEB;
     border-radius: 50px;
     color: #0D0B08;
+    transition: 0.4s;
 }
 
 
 main.conteiner {
     margin: auto;
-    width: 100%;
 }
 
 
@@ -126,7 +126,6 @@ section.hero {
     background-color: white;
     background-size: cover;
     height: 90vh;
-    width: 100%;
     padding: 0px 30px;
 }
 
@@ -134,7 +133,7 @@ section.hero::after {
     content: url(../imagens/seta_preta.png);
     position: absolute;
     height: 35px;
-    bottom: 90px;
+    bottom: 50px;
 
     animation: downarrow 0.6s infinite alternate ease-in-out;
 
@@ -164,7 +163,6 @@ section.secao-sobre {
     background: url(../imagens/salao-panorama.jpg) center center no-repeat;
     background-size: cover;
     height: 90vh;
-    width: 100%;
     color: #F2EEEB;
 }
 
@@ -178,17 +176,17 @@ section.melhores-cortes {
     justify-content: center;
     align-items: center;
     height: 90vh;
-    width: 100vw;
+    width: 100%;
+    padding: 30px;
     background: #F2EEEB;
     box-shadow: inset 1px -3px 15px 2px rgba(0, 0, 0, 0.29);
-    overflow: hidden;
 
 }
 
 div.cortes {
     display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 300px));
-    grid-template-rows: minmax(200px, 300px);
+    grid-template-columns: repeat(3, minmax(100px, 300px));
+    grid-template-rows: minmax(100px, 300px);
     gap: 40px;
 
 }
@@ -223,15 +221,20 @@ button.fazer-corte {
     position: absolute;
     bottom: 5px;
     left: 5px;
+
     width: 100px;
     height: 35px;
+
     border: 1px solid white;
     border-radius: 30px;
+
     font-weight: bold;
+
     background: rgba(68, 67, 67, 0.566);
     color: white;
     transition: 0.3s;
 }
+
 
 button.fazer-corte:hover {
     background: white;
@@ -247,7 +250,6 @@ button.fazer-corte:hover {
 /* === SEÇÃO ONDE ESTAMOS === */
 section.secao-onde-estamos {
     height: 70vh;
-    width: 100vw;
     background: url(../imagens/pexels-caleb-oquendo-3162022.jpg) center center no-repeat;
     background-size: cover;
     text-align: center;
@@ -266,7 +268,6 @@ section.secao-contato {
     position: relative;
     background: #F2EEEB;
     height: 70vh;
-    width: 100vw;
 }
 
 section.secao-contato a i {
@@ -289,7 +290,6 @@ section.secao-contato a i {
 /* === SECAO DO RODAPE === */
 .rodape {
     height: 30vh;
-    width: 100vw;
     display: flex;
     display: flex;
     justify-content: center;

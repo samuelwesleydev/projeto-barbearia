@@ -6,6 +6,190 @@ TV and Extra Large Screens – 1201px and more */
 
 
 /* tamanhos grandes primeiro */
-@media screen and (min-width:1024px) and (max-width: 1440px){
+@media screen and (min-width:768px) and (max-width: 1241px) {
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .header div {
+        align-self: start;
+    }
+
+    .header .logo {
+        align-self: start;
+    }
+
+    .header nav {
+        align-self: center;
+        /* background:blue; */
+        align-self: end;
+    }
+
+    .header nav ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+
+    }
+
+   
+
+/* SECAO MELHORES CORTES */
+    div.cortes {
+        gap: 20px;
     
+    }
+
+}
+
+/* tamanhos de tablet */
+@media screen and (max-width:768px) {
+
+    /* CSS PADRÃO PARA TODAS SECTION */
+    section h2{
+        font-size: 3.5rem;
+    }
+    section p{
+        font-size:2.0rem;
+    }
+
+/* CABECALHO */
+    .header {
+        display: inline-block;
+    }
+
+    .header div {
+        margin-bottom: 20px;
+    }
+
+    .header nav i {
+        display: block;
+        text-align: right;
+    }
+
+    .header nav ul {
+        display: none;
+        text-align: right;
+
+    }
+
+    .header nav ul li {
+        margin: 10px 0px;
+    }
+    .header nav ul li a:hover {
+        color: white;
+        background: transparent;
+    }
+
+    /* SEÇÃO HERO PARA TABLET */
+
+    section.hero {
+        text-align: center;
+    }
+
+
+    section.hero::after {
+        content: url(../imagens/seta_preta.png);
+        position: absolute;
+        height: 35px;
+        bottom: 40px;
+    
+        animation: downarrow 0.6s infinite alternate ease-in-out;
+    
+    }
+    section.melhores-cortes{
+        height: 100%;
+        width: 100%;
+    }
+
+    div.cortes{
+        display: grid;
+        grid-template-columns: minmax(200px, 400px);
+        grid-template-rows: repeat(3, minmax(200px, 300px));
+    }
+
+
+    /* SECAO DO RODAPÉ */
+
+    .rodape nav ul li {
+        text-align: center;
+        font-size: 2.0rem;
+
+    }
+    .rodape p {
+        font-size: 1.5rem;
+    }
+    
+
+
+}
+
+/* tamanhos para celular grande */
+@media screen and (max-width:425px) {
+
+    /* CSS PADRÃO PARA TODAS SECTION */
+    section h2 {
+        font-size: 2.5rem;
+    }
+
+    section p {
+        font-size: 1.5rem;
+    }
+
+
+
+    /* SEÇÃO DO HEADER */
+    .header {
+        padding: 10px 20px;
+    }
+    .header nav ul li a{
+        font-size: 1.8rem;
+    }
+
+    .header div h1 {
+        font-size: 3.5rem;
+    }
+
+    /* SEÇÃO HERO PARA CELULARES GRANDES */
+
+   
+    section.hero::after {
+        content: url(../imagens/seta_preta.png);
+        position: absolute;
+        height: 35px;
+        bottom: 40px;
+
+        animation: downarrow 0.6s infinite alternate ease-in-out;
+
+    }
+
+/* SECAO DO RODAPÉ */
+
+    .rodape nav ul li {
+        text-align: center;
+        font-size: 1.5rem;
+
+    }
+    .rodape p {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* MEDIA QUERIE CELULARES PEQUENOS */
+@media screen and (max-width:320px){
+    .header h1 {
+        text-align: center;
+    }
+
+    .header div{
+        flex-direction: column;
+    }
+
+    .header nav i {
+        font-size: 3.0rem;
+    }
 }
