@@ -50,11 +50,7 @@ html {
 .header nav {
     align-self:flex-end;
 }
-.header nav i {
-    display: none;
-    color: white;
-    font-size: 4.0rem;
-}
+
 .header nav ul{
     display:flex;
     justify-content: space-between;

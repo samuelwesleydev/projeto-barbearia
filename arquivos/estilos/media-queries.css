@@ -58,7 +58,7 @@ TV and Extra Large Screens – 1201px and more */
 
 /* CABECALHO */
     .header {
-        display: inline-block;
+        display:block;
     }
 
     .header div {
@@ -71,7 +71,7 @@ TV and Extra Large Screens – 1201px and more */
     }
 
     .header nav ul {
-        display: none;
+        display: block;
         text-align: right;
 
     }
@@ -185,11 +185,8 @@ TV and Extra Large Screens – 1201px and more */
         text-align: center;
     }
 
-    .header div{
+    .header .logo-titulo{
         flex-direction: column;
     }
 
-    .header nav i {
-        font-size: 3.0rem;
-    }
 }

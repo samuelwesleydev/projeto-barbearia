@@ -11,6 +11,8 @@
 
     <!-- LINK DAS CSS -->
     <link rel="stylesheet" href="arquivos/estilos/style.css">
+    <!-- LINK DA CSS DO MENU HAMBURGUER -->
+    <link rel="stylesheet" href="arquivos/estilos/menu.css">
     <!-- LINK DOS MEDIA QUERIES -->
     <link rel="stylesheet" href="arquivos/estilos/media-queries.css">
     <title>barbearia | tops cortes</title>
@@ -21,15 +23,15 @@
 <body>
 
     <header id="topo-header" class="header">
-        <div class="ovo">
+        <div class="logo-titulo">
             <img class="logo" src="arquivos/imagens/204.jpg" alt="logo da barbearia" width="100px">
             <h1>Barbearia tops cortes</h1>
         </div>
-        <nav>
-            <i onclick="ativarMenu()" class="fa-solid fa-bars"></i>
-            
+        <nav class="nav">
+            <div class="pai-do-hamburguer">
+                <button class="hamburguer"></button>
+            </div>
             <ul id="menu-de-links">
-               
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#melhores-cortes-id">Melhores cortes</a></li>
                 <li><a href="#contato">Contato</a></li>
