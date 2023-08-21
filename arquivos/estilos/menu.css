@@ -36,7 +36,7 @@
         background: rgb(34, 34, 34);
         flex-direction: column;
         align-items: center;
-        transform: translateX(100%);
+        transform: translateX(250%);
         z-index: 1;
         transition: transform 0.3s ease-in;
         padding-top: 50px;
@@ -94,6 +94,37 @@
 
 }
 
+@media screen and (max-width: 700px){
+
+    nav ul{
+        top: 30vh;
+
+    }
+}
+@media screen and (max-width: 463px){
+
+    nav ul{
+        top: 40vh;
+    }
+    nav ul li{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 425px){
+
+    nav ul{
+        top: 24vh;
+
+    }
+}
+@media screen and (max-width: 348px){
+
+    nav ul{
+        top: 30vh;
+
+    }
+}
+
 /* MEDIA QUERIE CELULARES PEQUENOS */
 @media screen and (max-width:320px){
 
@@ -102,11 +133,10 @@
     }
 
     nav ul{
-        top: 40vh;
-        right: 0px;
-        width: 50vw;
+        top: 42vh;
     }
     nav ul li{
         text-align: center;
     }
+
 }
