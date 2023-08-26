@@ -1,0 +1,77 @@
+.menu-ativado{
+    display: none;
+}
+
+@media screen and (max-width:768px){
+
+    
+    
+.nav .menu-ativado{
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    margin-bottom: 20px;
+    z-index: 1;
+    width:35px;
+    height: 35px;
+    opacity: 0;
+}
+
+
+.menu-mobile{
+    position:absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.menu-mobile .line{
+    display: block;
+    width: 35px;
+    height: 4px;
+    margin-bottom: 7px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all ease .2s;
+}
+
+.nav ul{
+    position: absolute;
+    z-index: 99999;
+    right: 0;
+    transition: all ease .2s;
+    pointer-events: none;
+}
+
+.nav ul li a {
+opacity: 0;
+}
+
+/* QUANDO O CHECKE BOX FOR ATIVADO */
+
+.nav .menu-ativado:checked ~.menu-mobile span{
+    /* background: black; */
+}
+
+.nav .menu-ativado:checked ~.menu-mobile span:nth-child(1){
+    transform-origin: 6% 0%;
+    transform: rotate(45deg) scaleX(1.3);
+}
+.nav .menu-ativado:checked ~.menu-mobile span:nth-child(2){
+   opacity: 0;
+}
+.nav .menu-ativado:checked ~.menu-mobile span:nth-child(3){
+    transform-origin: 24% 100%;
+    transform: rotate(-45deg) scaleX(1.3);
+}
+
+
+.nav .menu-ativado:checked ~ ul {
+    background: rgb(38, 39, 38);
+    pointer-events: all;
+}
+.nav .menu-ativado:checked ~ ul li a{
+    transition: 0.5s 0.2s;
+    opacity: 1;
+}
+}

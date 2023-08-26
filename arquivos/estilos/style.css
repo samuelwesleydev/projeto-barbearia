@@ -18,7 +18,6 @@
 html {
     scroll-behavior: smooth;
     font-size: 65.5%;
-
 }
 
 .header{
@@ -29,10 +28,10 @@ html {
     align-items: center;
     flex: 1;
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
     padding: 20px 40px;
 }
-.header div{
+.header .logo-titulo{
     display: flex;
     justify-self: start;
     align-items:center;
@@ -49,8 +48,9 @@ html {
 }
 .header nav {
     align-self:flex-end;
+    position: relative;
 }
-
+/* algumas configuraçoes estão no css de menu */
 .header nav ul{
     display:flex;
     justify-content: space-between;
@@ -123,7 +123,10 @@ section.hero {
     background-size: cover;
     height: 90vh;
     padding: 0px 30px;
+
 }
+
+
 
 section.hero::after {
     content: url(../imagens/seta_preta.png);
@@ -171,11 +174,14 @@ section.melhores-cortes {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+
     height: 90vh;
     width: 100%;
     padding: 30px;
     background: #F2EEEB;
     box-shadow: inset 1px -3px 15px 2px rgba(0, 0, 0, 0.29);
+
 
 }
 
