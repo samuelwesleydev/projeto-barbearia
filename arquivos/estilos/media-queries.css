@@ -24,7 +24,6 @@ TV and Extra Large Screens – 1201px and more */
 
     .header nav {
         align-self: center;
-        /* background:blue; */
         align-self: end;
     }
 
@@ -35,12 +34,12 @@ TV and Extra Large Screens – 1201px and more */
 
     }
 
-   
 
-/* SECAO MELHORES CORTES */
+
+    /* SECAO MELHORES CORTES */
     div.cortes {
         gap: 20px;
-    
+
     }
 
 }
@@ -49,16 +48,17 @@ TV and Extra Large Screens – 1201px and more */
 @media screen and (max-width:768px) {
 
     /* CSS PADRÃO PARA TODAS SECTION */
-    section h2{
+    section h2 {
         font-size: 3.5rem;
     }
-    section p{
-        font-size:2.0rem;
+
+    section p {
+        font-size: 2.0rem;
     }
 
-/* CABECALHO */
+    /* CABECALHO */
     .header {
-        display:block;
+        display: block;
     }
 
     .header div {
@@ -79,6 +79,7 @@ TV and Extra Large Screens – 1201px and more */
     .header nav ul li {
         margin: 10px 0px;
     }
+
     .header nav ul li a:hover {
         color: white;
         background: transparent;
@@ -96,16 +97,17 @@ TV and Extra Large Screens – 1201px and more */
         position: absolute;
         height: 35px;
         bottom: 40px;
-    
+
         animation: downarrow 0.6s infinite alternate ease-in-out;
-    
+
     }
-    section.melhores-cortes{
+
+    section.melhores-cortes {
         height: 100%;
         width: 100%;
     }
 
-    div.cortes{
+    div.cortes {
         display: grid;
         grid-template-columns: minmax(200px, 400px);
         grid-template-rows: repeat(3, minmax(200px, 300px));
@@ -119,10 +121,11 @@ TV and Extra Large Screens – 1201px and more */
         font-size: 2.0rem;
 
     }
+
     .rodape p {
         font-size: 1.5rem;
     }
-    
+
 
 
 }
@@ -145,7 +148,8 @@ TV and Extra Large Screens – 1201px and more */
     .header {
         padding: 10px 20px;
     }
-    .header nav ul li a{
+
+    .header nav ul li a {
         font-size: 1.8rem;
     }
 
@@ -154,8 +158,10 @@ TV and Extra Large Screens – 1201px and more */
     }
 
     /* SEÇÃO HERO PARA CELULARES GRANDES */
+    section.hero {
+        height: 70vh;
+    }
 
-   
     section.hero::after {
         content: url(../imagens/seta_preta.png);
         position: absolute;
@@ -166,13 +172,25 @@ TV and Extra Large Screens – 1201px and more */
 
     }
 
-/* SECAO DO RODAPÉ */
+    /* SECAO SOBRE A GENTE */
+    section.secao-sobre {
+        height: 70vh;
+    }
+
+
+    /* SECAO CORTES */
+    .melhores-cortes h2 {
+        text-align: center;
+    }
+
+    /* SECAO DO RODAPÉ */
 
     .rodape nav ul li {
         text-align: center;
         font-size: 1.5rem;
 
     }
+
     .rodape p {
         font-size: 1.5rem;
     }
@@ -180,13 +198,32 @@ TV and Extra Large Screens – 1201px and more */
 
 
 /* MEDIA QUERIE CELULARES PEQUENOS */
-@media screen and (max-width:320px){
+@media screen and (max-width:320px) {
     .header h1 {
         text-align: center;
     }
 
-    .header .logo-titulo{
+    .header .logo-titulo {
         flex-direction: column;
     }
+
+    section.hero {
+        height: 70vh;
+    }
+
+    section.hero h2 {
+        margin-bottom: 21px;
+    }
+
+    section.hero::after {
+        content: url(../imagens/seta_preta.png);
+        position: absolute;
+        height: 35px;
+        bottom: 19px;
+
+        animation: downarrow 0.6s infinite alternate ease-in-out;
+
+    }
+
 
 }

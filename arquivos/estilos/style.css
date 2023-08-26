@@ -20,7 +20,7 @@ html {
     font-size: 65.5%;
 }
 
-.header{
+.header {
     background: url(../imagens/mesa-com-maquininha.jpg) center center no-repeat;
     background-size: cover;
     display: flex;
@@ -31,37 +31,43 @@ html {
     /* overflow: hidden; */
     padding: 20px 40px;
 }
-.header .logo-titulo{
+
+.header .logo-titulo {
     display: flex;
     justify-self: start;
-    align-items:center;
+    align-items: center;
     gap: 30px;
 }
-.header h1{
+
+.header h1 {
     font-size: 5.0rem;
     color: white;
     font-family: var(--font-h2-section);
     text-shadow: 3px 3px 3px rgba(255, 255, 255, 0.137);
 }
-.header .logo{
+
+.header .logo {
     border-radius: 50%;
 }
+
 .header nav {
-    align-self:flex-end;
+    align-self: flex-end;
     position: relative;
 }
+
 /* algumas configuraçoes estão no css de menu */
-.header nav ul{
-    display:flex;
+.header nav ul {
+    display: flex;
     justify-content: space-between;
     list-style: none;
 
 }
-.header nav ul li a{
-    color:white;
+
+.header nav ul li a {
+    color: white;
     font-size: 2.3rem;
     padding: 0px 10px;
-    text-shadow:1px 1px 1px rgba(255, 255, 255, 0.445);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.445);
     font-family: var(--font-p-section);
 
 }
@@ -331,4 +337,3 @@ section.secao-contato a i {
     text-decoration: underline;
     color: white;
 }
-
