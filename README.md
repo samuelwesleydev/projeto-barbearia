@@ -1,2 +1,2 @@
 # projeto-barbearia
- decidir tentar criar um projeto da minha cabeça, farei melhorias em breve no projeto :)
+Um projeto de babearia para treinar meus conhecimento em html e css.
